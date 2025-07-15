@@ -31,8 +31,18 @@ body {
   border-radius: 12px;
   flex-shrink: 0;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
+
+.carousel img:hover {
+  transform: rotateY(10deg) scale(1.07);
+  box-shadow: 0 20px 30px rgba(0, 195, 255, 0.4);
+  z-index: 5;
+}
+
 
 .carousel img:hover {
   transform: scale(1.05);
@@ -94,6 +104,11 @@ body {
   color: white;
   cursor: pointer;
   transition: 0.3s;
+}
+.filters button {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .filters button.active,
