@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BoostThumbs | Thumbnail Designer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header id="navbar">
+    <h1>🚀 BoostThumbs</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2 class="fade-in">Boost your views with <br><span>Better Thumbnails 💥</span></h2>
+      <p class="fade-in delay">Professional YouTube thumbnails that grab attention and drive results.</p>
+      <a href="#contact" class="cta-button fade-in delay">Hire Me</a>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>My Work</h2>
+
+    <div class="filters">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="tech">Tech</button>
+      <button data-filter="vlogs">Vlogs</button>
+      <button data-filter="tutorials">Tutorials</button>
+      <button data-filter="mystery">Mystery</button>
+      <button data-filter="scientific">Scientific</button>
+      <button data-filter="social">Social</button>
+    </div>
+
+    <div class="carousel-wrapper">
+      <button class="carousel-btn left" onclick="scrollCarousel(-1)">‹</button>
+      <div class="carousel" id="carousel">
+        <img src="thumbnails/thumb1.jpg" alt="Tech Thumbnail" data-category="tech" onclick="openLightbox(this.src)" />
+        <img src="thumbnails/thumb2.jpg" alt="Vlog Thumbnail" data-category="vlogs" onclick="openLightbox(this.src)" />
+        <img src="thumbnails/thumb3.jpg" alt="Tutorial Thumbnail" data-category="tutorials" onclick="openLightbox(this.src)" />
+        <img src="thumbnails/thumb4.jpg" alt="Mystery Thumbnail" data-category="mystery" onclick="openLightbox(this.src)" />
+        <img src="thumbnails/thumb5.jpg" alt="Scientific Thumbnail" data-category="scientific" onclick="openLightbox(this.src)" />
+        <img src="thumbnails/thumb6.jpg" alt="Social Thumbnail" data-category="social" onclick="openLightbox(this.src)" />
+        <img src="thumbnails/thumb7.jpg" alt="Tech Thumbnail 2" data-category="tech" onclick="openLightbox(this.src)" />
+        <img src="thumbnails/thumb8.jpg" alt="Vlog Thumbnail 2" data-category="vlogs" onclick="openLightbox(this.src)" />
+        <img src="thumbnails/thumb9.jpg" alt="Tutorial Thumbnail 2" data-category="tutorials" onclick="openLightbox(this.src)" />
+        <img src="thumbnails/thumb10.jpg" alt="Mystery Thumbnail 2" data-category="mystery" onclick="openLightbox(this.src)" />
+      </div>
+      <button class="carousel-btn right" onclick="scrollCarousel(1)">›</button>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About BoostThumbs</h2>
+    <p>
+      I’m Niyaz — founder of BoostThumbs. I design powerful YouTube thumbnails
+      that demand attention. With a mix of psychology, design trends, and bold colors — I help content creators grow faster.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/mdkdnqyk" method="POST">
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="email" name="email" placeholder="Your email" required />
+      <textarea name="message" placeholder="Your message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 BoostThumbs by Niyaz. All rights reserved.</p>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Large Thumbnail" />
+  </div>
+</body>
+</html>
