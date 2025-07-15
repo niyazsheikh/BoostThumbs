@@ -248,3 +248,103 @@ footer {
   font-size: 0.9rem;
   background: rgba(0,0,0,0.4);
 }
+/* CTA Button Enhancement */
+.cta-button {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  background: linear-gradient(135deg, #6a00f4, #00c3ff);
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(0, 195, 255, 0.3);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #00c3ff, #6a00f4);
+  box-shadow: 0 6px 20px rgba(0, 195, 255, 0.5);
+  transform: scale(1.05);
+}
+
+/* 3D Carousel Images */
+.carousel img {
+  height: 200px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.carousel img:hover {
+  transform: rotateY(10deg) scale(1.07);
+  box-shadow: 0 20px 30px rgba(0, 195, 255, 0.4);
+  z-index: 5;
+}
+
+/* Responsive Mobile Styling */
+@media screen and (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #navbar nav {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .hero {
+    padding: 4rem 1rem;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.6rem 1.6rem;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+  }
+
+  .filters {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0 1rem;
+  }
+
+  .carousel img {
+    height: 150px;
+  }
+
+  .carousel-btn {
+    display: none;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+}
