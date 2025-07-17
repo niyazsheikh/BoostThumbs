@@ -1,92 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BoostThumbs | Thumbnail Designer</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <title>BoostThumbs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f0f1a;
+      color: white;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
-  <header id="navbar">
-    <h1>BoostThumbs 🚀</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h2 class="fade-in">Boost your views with <br><span>Better Thumbnails 💥</span></h2>
-      <p class="fade-in delay">Professional YouTube thumbnails that grab attention and drive results.</p>
-      <a href="#contact" class="cta-button fade-in delay">🎨 Design Your Thumbnail</a>
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-80 backdrop-blur-lg text-white flex justify-between items-center px-6 py-4">
+    <h2 class="text-2xl font-semibold">BoostThumbs</h2>
+    <ul class="flex gap-6 text-sm md:text-base">
+      <li><a href="#portfolio" class="hover:underline">Portfolio</a></li>
+      <li><a href="#about" class="hover:underline">About</a></li>
+      <li><a href="#contact" class="hover:underline">Contact</a></li>
+    </ul>
+  </nav>  <!-- Hero Section -->  <section class="hero text-center py-32 px-6 bg-gradient-to-b from-black to-purple-950">
+    <h1 class="text-5xl md:text-6xl font-bold text-white">BoostThumbs</h1>
+    <p class="text-lg mt-4 text-gray-300">Boost your views with better thumbnails</p>
+  </section>  <!-- Portfolio Grid -->  <section id="portfolio" class="grid grid-cols-1 md:grid-cols-3 gap-6 p-8 mt-10">
+    <div class="rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+      <img src="thumb1.jpg" alt="Thumbnail 1" class="w-full h-auto">
     </div>
-  </section>
-
-  <section id="portfolio">
-    <h2>My Work</h2>
-
-    <div class="filters">
-      <button data-filter="all" class="active">All</button>
-      <button data-filter="tech">Tech</button>
-      <button data-filter="vlogs">Vlogs</button>
-      <button data-filter="tutorials">Tutorials</button>
-      <button data-filter="mystery">Mystery</button>
-      <button data-filter="scientific">Scientific</button>
-      <button data-filter="social">Social</button>
-      <button data-filter="social">Podcast</button>
+    <div class="rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+      <img src="thumb2.jpg" alt="Thumbnail 2" class="w-full h-auto">
     </div>
-
-    <div class="carousel-wrapper">
-      <button class="carousel-btn left" onclick="scrollCarousel(-1)">‹</button>
-      <div class="carousel" id="carousel">
-        <img src="thumbnails/thumb1.jpg" alt="Tech Thumbnail" data-category="tech" onclick="openLightbox(this.src)" />
-        <img src="thumbnails/thumb2.jpg" alt="Vlog Thumbnail" data-category="vlogs" onclick="openLightbox(this.src)" />
-        <img src="thumbnails/thumb3.jpg" alt="Tutorial Thumbnail" data-category="tutorials" onclick="openLightbox(this.src)" />
-        <img src="thumbnails/thumb4.jpg" alt="Mystery Thumbnail" data-category="mystery" onclick="openLightbox(this.src)" />
-        <img src="thumbnails/thumb5.jpg" alt="Scientific Thumbnail" data-category="scientific" onclick="openLightbox(this.src)" />
-        <img src="thumbnails/thumb6.jpg" alt="Social Thumbnail" data-category="social" onclick="openLightbox(this.src)" />
-        <img src="thumbnails/thumb7.jpg" alt="Tech Thumbnail 2" data-category="tech" onclick="openLightbox(this.src)" />
-        <img src="thumbnails/thumb8.jpg" alt="Vlog Thumbnail 2" data-category="vlogs" onclick="openLightbox(this.src)" />
-        <img src="thumbnails/thumb9.jpg" alt="Tutorial Thumbnail 2" data-category="tutorials" onclick="openLightbox(this.src)" />
-        <img src="thumbnails/thumb10.jpg" alt="Mystery Thumbnail 2" data-category="mystery" onclick="openLightbox(this.src)" />
-      </div>
-      <button class="carousel-btn right" onclick="scrollCarousel(1)">›</button>
+    <div class="rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+      <img src="thumb3.jpg" alt="Thumbnail 3" class="w-full h-auto">
     </div>
-  </section>
-
-  <section id="about">
-    <h2>About BoostThumbs</h2>
-    <p style="text-align: center;">
-      <strong>BoostThumbs 🚀</strong> is founded and led by <strong>Niyaz</strong>, a passionate thumbnail designer dedicated to helping creators grow faster.<br>
-      I craft bold, click-worthy YouTube thumbnails designed to stand out in a crowded feed and convert views into engagement.<br>
-      With a deep understanding of design psychology, colors, and scroll behavior, every thumbnail I create is built with intention and impact.<br>
-      From tech to vlogs, I work with creators across niches to elevate their content visually.<br>
-      Your content deserves to be seen — and BoostThumbs is here to make that happen.
-    </p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/mdkdnqyk" method="POST">
-      <input type="text" name="name" placeholder="Your name" required />
-      <input type="email" name="email" placeholder="Your email" required />
-      <textarea name="message" placeholder="Your message" required></textarea>
-      <button type="submit">Send Message</button>
+    <!-- Add more thumbnails here -->
+  </section>  <!-- About Section -->  <section id="about" class="text-center py-16 px-6 text-gray-300">
+    <h2 class="text-3xl font-semibold mb-4 text-white">About BoostThumbs</h2>
+    <p>We help YouTubers elevate their content with scroll-stopping thumbnails designed for performance, clarity, and clickability.</p>
+  </section>  <!-- Contact Form -->  <section id="contact" class="bg-purple-900 p-10 text-white rounded-2xl max-w-2xl mx-auto my-20 shadow-xl">
+    <h3 class="text-2xl font-semibold mb-4">Get in Touch</h3>
+    <form action="mailto:your@email.com" method="post" enctype="text/plain">
+      <input type="text" placeholder="Your Name" class="w-full p-3 mb-4 rounded-lg bg-purple-800 text-white">
+      <input type="email" placeholder="Your Email" class="w-full p-3 mb-4 rounded-lg bg-purple-800 text-white">
+      <textarea placeholder="Your Message" rows="4" class="w-full p-3 mb-4 rounded-lg bg-purple-800 text-white"></textarea>
+      <button type="submit" class="bg-white text-purple-900 px-6 py-3 rounded-full hover:scale-105 transition">Send Message</button>
     </form>
-  </section>
-
-  <footer>
-    <p>© 2025 BoostThumbs by Niyaz. All rights reserved.</p>
+  </section>  <!-- Footer -->  <footer class="text-center py-6 text-gray-400 text-sm">
+    © 2025 BoostThumbs. Designed with 💜 | Credits: ChatGPT + Niyaz
   </footer>
-
-  <!-- Lightbox Modal -->
-  <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
-    <span style="position:absolute;top:20px;right:30px;font-size:2rem;cursor:pointer;" onclick="closeLightbox(event)">✖</span>
-    <img id="lightbox-img" src="" alt="Large Thumbnail" />
-  </div>
 </body>
 </html>
